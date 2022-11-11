@@ -11,7 +11,9 @@ public enum ActionKeywords
     PushedBack = 1 << 5,
     FallDown = 1 << 6,
     UpperCut = 1 << 7,
-    KnockOut = 1 << 8
+    KnockOut = 1 << 8,
+    Victory = 1 << 9,
+    ChangeFromIdle = 1 << 10
 }
 
 public class PlayerController : MonoBehaviour

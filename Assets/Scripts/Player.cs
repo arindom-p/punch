@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Animations.Rigging;
 
 public class Player : MonoBehaviour
 {
@@ -14,12 +15,15 @@ public class Player : MonoBehaviour
 
     private Transform mainCamT;
     private Animator animator;
+    private RigBuilder rigbuilder;
     private int lifeRemaining, totalLife = 100;
+    private bool isRigActive = false;
 
     void Start()
     {
         mainCamT = Camera.main.transform;
         animator = GetComponent<Animator>();
+        rigbuilder = GetComponent<RigBuilder>();
         CreateParameterDictionary();
         SetLife(totalLife);
     }
@@ -67,7 +71,7 @@ public class Player : MonoBehaviour
 
     public void AnimationBackOnFightIdle()
     {
-        // print("Animation back to FightIdle");
+        SetRigLayersActivationStatus(true);
     }
 
     public void DidHitOpponent()
@@ -77,6 +81,7 @@ public class Player : MonoBehaviour
 
     public void GotHit(int flags)
     {
+        SetRigLayersActivationStatus(false);
         ChangeLife(-40);
         if (lifeRemaining <= 0) flags |= (int)ActionKeywords.Died;
         SetAnimatorFlags(flags);
@@ -94,4 +99,21 @@ public class Player : MonoBehaviour
 
         lifeBarTransform.DOScaleX(lifeRemaining / (float)totalLife, 0.2f);
     }
+
+    private void SetRigLayersActivationStatus(bool activate)
+    {
+        if (isRigActive == activate) return;
+        float startVal = activate ? 0 : 1;
+        float endVal = ((int)startVal + 1) % 2;
+        foreach (var layer in rigbuilder.layers)
+        {
+            DOTween.To((x) =>
+            {
+                layer.rig.weight = x;
+            }, startVal, endVal, 0.5f);
+        }
+        isRigActive = activate;
+    }
+
+    public bool IsDied() => lifeRemaining <= 0;
 }
