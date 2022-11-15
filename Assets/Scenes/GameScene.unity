@@ -400,14 +400,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.093947515, y: 0.700838, z: -0.093947515, w: 0.700838}
-  m_LocalPosition: {x: -3.85, y: 2.02, z: 0.2}
+  m_LocalRotation: {x: 0.21868402, y: 0.6724413, z: -0.21868402, w: 0.6724413}
+  m_LocalPosition: {x: -3.19, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 15.27, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 36.03, y: 90, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -867,7 +867,7 @@ PrefabInstance:
     - target: {fileID: 192091306879903866, guid: 732640c488edd465db75db098d2b88ec,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 192091306879903866, guid: 732640c488edd465db75db098d2b88ec,
         type: 3}
@@ -914,25 +914,40 @@ PrefabInstance:
       propertyPath: headTargetPointTransform
       value: 
       objectReference: {fileID: 1382869796}
-    - target: {fileID: 2094177573048567362, guid: 732640c488edd465db75db098d2b88ec,
-        type: 3}
-      propertyPath: ownHeadTargetPointerTransform
-      value: 
-      objectReference: {fileID: 527693061}
     - target: {fileID: 2284343473843253391, guid: 732640c488edd465db75db098d2b88ec,
         type: 3}
       propertyPath: m_Name
       value: HeadingRig
       objectReference: {fileID: 0}
-    - target: {fileID: 2873783529902155119, guid: 732640c488edd465db75db098d2b88ec,
+    - target: {fileID: 2810903980919452168, guid: 732640c488edd465db75db098d2b88ec,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: m_IsContraintActive
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2810903980919452168, guid: 732640c488edd465db75db098d2b88ec,
+        type: 3}
+      propertyPath: m_TranslationOffset.y
+      value: -1.5789671
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810903980919452168, guid: 732640c488edd465db75db098d2b88ec,
+        type: 3}
+      propertyPath: m_TranslationOffset.z
+      value: -1.5144386
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810903980919452168, guid: 732640c488edd465db75db098d2b88ec,
+        type: 3}
+      propertyPath: m_Sources.Array.data[0].sourceTransform
+      value: 
+      objectReference: {fileID: 1382869796}
     - target: {fileID: 3456438431343487526, guid: 732640c488edd465db75db098d2b88ec,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976931059771744958, guid: 732640c488edd465db75db098d2b88ec,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5615997701747689904, guid: 732640c488edd465db75db098d2b88ec,
         type: 3}
@@ -949,6 +964,11 @@ PrefabInstance:
       propertyPath: m_Data.m_SourceObjects.m_Item0.transform
       value: 
       objectReference: {fileID: 527693061}
+    - target: {fileID: 7928294303017068744, guid: 732640c488edd465db75db098d2b88ec,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 732640c488edd465db75db098d2b88ec, type: 3}
 --- !u!114 &527693060 stripped
@@ -2396,7 +2416,7 @@ PrefabInstance:
     - target: {fileID: 192091306879903866, guid: 732640c488edd465db75db098d2b88ec,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 192091306879903866, guid: 732640c488edd465db75db098d2b88ec,
         type: 3}
@@ -2443,11 +2463,6 @@ PrefabInstance:
       propertyPath: headTargetPointTransform
       value: 
       objectReference: {fileID: 140246471}
-    - target: {fileID: 2094177573048567362, guid: 732640c488edd465db75db098d2b88ec,
-        type: 3}
-      propertyPath: ownHeadTargetPointerTransform
-      value: 
-      objectReference: {fileID: 1940241205}
     - target: {fileID: 2284343473843253391, guid: 732640c488edd465db75db098d2b88ec,
         type: 3}
       propertyPath: m_Name
@@ -2503,12 +2518,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2873783529902155119, guid: 732640c488edd465db75db098d2b88ec,
+    - target: {fileID: 2810903980919452168, guid: 732640c488edd465db75db098d2b88ec,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: m_TranslationOffset.y
+      value: -1.5789671
       objectReference: {fileID: 0}
+    - target: {fileID: 2810903980919452168, guid: 732640c488edd465db75db098d2b88ec,
+        type: 3}
+      propertyPath: m_TranslationOffset.z
+      value: -1.5144386
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810903980919452168, guid: 732640c488edd465db75db098d2b88ec,
+        type: 3}
+      propertyPath: m_Sources.Array.data[0].sourceTransform
+      value: 
+      objectReference: {fileID: 140246471}
     - target: {fileID: 3456438431343487526, guid: 732640c488edd465db75db098d2b88ec,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976931059771744958, guid: 732640c488edd465db75db098d2b88ec,
         type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2566,11 +2596,7 @@ PrefabInstance:
     - target: {fileID: 4560506123777607718, guid: 732640c488edd465db75db098d2b88ec,
         type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'mixamorig:Head'\n\tTransform 'mixamorig:Neck'\n\tTransform
-        'mixamorig:Head'\n\tTransform 'mixamorig:Neck'\n\tTransform 'mixamorig:Head'\n\tTransform
-        'mixamorig:Neck'"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5615997701747689904, guid: 732640c488edd465db75db098d2b88ec,
         type: 3}
@@ -2627,6 +2653,11 @@ PrefabInstance:
       propertyPath: m_Data.m_SourceObjects.m_Item0.transform
       value: 
       objectReference: {fileID: 1940241205}
+    - target: {fileID: 7928294303017068744, guid: 732640c488edd465db75db098d2b88ec,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8338509562497955815, guid: 732640c488edd465db75db098d2b88ec,
         type: 3}
       propertyPath: m_Weight
